@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="css/datepicker.css" rel="stylesheet" />
+</head>
+<body>
+    <p>1、默认情况</p>
+    <input id="dateInput1" type="text" placeholder="yyyy-MM-dd" />
+    <br />
+    <p>2、限制可选择日期从今天开始</p>
+    <input id="dateInput2" type="text" placeholder="yyyy-MM-dd" />
+
+    <p>3、默认的选中日期为2013-01-02</p>
+    <input id="dateInput3" type="text" placeholder="yyyy-MM-dd" />
+
+    <p>4、回调函数</p>
+    <input id="dateInput4" type="text" placeholder="yyyy-MM-dd" />
+
+    <p>5、其他功能</p>
+    <input id="dateInput5" type="text" placeholder="yyyy-MM-dd" />
+    <br />
+    <input id="btnSelectDate" type="button" value="设置选中日期为2010-01-01" />
+    <input id="btnFocusDP" type="button" value="使日期插件具有焦点" />
+    <input id="btnShowDP" type="button" value="显示日期插件" />
+    <input id="btnHideDP" type="button" value="隐藏日期插件" />
+    <input id="btnPrev" type="button" value="向前切换" />
+    <input id="btnNext" type="button" value="向后切换" />
+    <input id="btnSetMin" type="button" value="设置最小日期为2016-01-01" />
+    <input id="btnSetMax" type="button" value="设置最大日期为2016-01-31" />
+
+    <script src="http://luopq.com/demo/lib/jquery-1.10.2.min.js"></script>
+    <script src="../src/jquery.datepicker.js"></script>
+    <script>
+        $("#dateInput1").datePicker();
+        $("#dateInput2").datePicker({ minDate: new Date() });
+        $("#dateInput3").datePicker({ currentDate: "2013-01-02" });
+        $("#dateInput4").datePicker({
+            minDate: null,
+            onDateSelected: function (date) {
+                alert("选择的日期:" + date);
+            }
+        });
+
+        var datePicker = $("#dateInput5").datePicker({
+            //currentDate: new Date("2010-01-01")
+        });
+        $("#btnSelectDate").on("click", function () {
+            datePicker.selectDate("2010-01-01");
+        })
+        $("#btnFocusDP").on("click", function () {
+            datePicker.focus();
+        })
+        $("#btnShowDP").on("click", function () {
+            datePicker.show();
+        })
+        $("#btnHideDP").on("click", function () {
+            datePicker.hide();
+        })
+        $("#btnPrev").on("click", function () {
+            datePicker.prev();
+        })
+        $("#btnNext").on("click", function () {
+            datePicker.next();
+        })
+        $("#btnSetMin").on("click", function () {
+            datePicker.setMinDate("2016-01-01");
+        })
+        $("#btnSetMax").on("click", function () {
+            datePicker.setMaxDate("2016-01-31");
+        })
+    </script>
+</body>
+</html>

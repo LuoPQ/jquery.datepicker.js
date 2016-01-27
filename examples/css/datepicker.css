@@ -1,0 +1,23 @@
+﻿div, a, dl, dt, dd { margin: 0; padding: 0; }
+.clearfix { zoom: 1; }
+    .clearfix:after { clear: both; content: ""; display: block; height: 0; line-height: 0; visibility: hidden; }
+.datepicker { border: 1px solid #f8f8f8; background: none repeat scroll 0 0 #fff; box-shadow: 1px 1px 3px #333333; width: 230px; position: relative; padding: 5px; text-align: center; color: #404040; font: 12px/22px Georgia; }
+    .datepicker .date-action { width: 100%; font-weight: 700; padding-bottom: 5px; }
+        .datepicker .date-action .prev, .datepicker .date-action .next { border-radius: 5px; border: 1px solid #ccc; cursor: pointer; height: 20px; width: 20px; }
+        .datepicker .date-action .prev { float: left; }
+        .datepicker .date-action .next { float: right; }
+            .datepicker .date-action .prev:before, .datepicker .date-action .next:before { content: ""; display: block; position: relative; left: 7px; top: 4px; width: 0; height: 0; border-bottom: 6px dashed transparent; border-top: 6px dashed transparent; }
+        .datepicker .date-action .prev:before { border-right: 6px solid #ff8f00; }
+        .datepicker .date-action .next:before { border-left: 6px solid #ff8f00; }
+        .datepicker .date-action span { cursor: pointer; }
+.date-unit { width: 230px; height: 130px; }
+    .date-unit a { color: #404040; cursor: pointer; display: inline-block; float: left; outline: medium none; overflow: hidden; text-align: center; text-decoration: none; }
+/*月份*/
+.datepicker .year a, .datepicker .month a { height: 35px; line-height: 35px; margin: 3px 3px 0; width: 50px; }
+/*日期*/
+.datepicker .week { display: inline-block; float: left; height: 24px; line-height: 24px; width: 32px; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; }
+.datepicker .day a { height: 25px; line-height: 22px; margin: 1px 1px 0; width: 30px; }
+.datepicker dd .select, .datepicker dd a:hover { background-color: #ff8f00; color: #fff; }
+.datepicker dd span { font-weight: bold; font-size: 10px; }
+.datepicker dd .today { color: #ff8f00; }
+.datepicker dd .disabled, .datepicker dd .disabled:hover { background-color: transparent; color: #999; cursor: default; }
