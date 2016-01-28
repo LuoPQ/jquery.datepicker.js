@@ -21,3 +21,4 @@
 .datepicker dd span { font-weight: bold; font-size: 10px; }
 .datepicker dd .today { color: #ff8f00; }
 .datepicker dd .disabled, .datepicker dd .disabled:hover { background-color: transparent; color: #999; cursor: default; }
+.datepicker .holiday { font-weight: bold; }

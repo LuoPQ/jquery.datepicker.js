@@ -320,7 +320,7 @@
         },
         createDate: function (date, month) {
             if (this.options.minDate) {
-                date.disabled = (Math.ceil(date.dateDiff(this.options.minDate)) < 0 || month != date.getMonth());
+                date.disabled = Math.ceil(date.dateDiff(Date.prototype.parse(this.options.minDate))) < 0 || month != date.getMonth();
             }
             else {
                 date.disabled = false;
@@ -328,7 +328,7 @@
             //date.isSelected = this.$ele.val() == date.format();
 
             if (this.options.maxDate && !date.disabled) {
-                date.disabled = (Math.ceil(date.dateDiff(this.options.maxDate)) > 0)
+                date.disabled = Math.ceil(date.dateDiff(Date.prototype.parse(this.options.maxDate))) > 0;
             }
 
             var dateInfo = this.getDayInfo(date);

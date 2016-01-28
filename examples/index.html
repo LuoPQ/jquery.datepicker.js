@@ -30,11 +30,11 @@
     <input id="btnSetMin" type="button" value="设置最小日期为2016-01-01" />
     <input id="btnSetMax" type="button" value="设置最大日期为2016-01-31" />
 
-    <script src="http://luopq.com/demo/lib/jquery-1.10.2.min.js"></script>
-    <script src="../src/jquery.datepicker.js"></script>
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../Scripts/datepicker/jquery.datepicker.js"></script>
     <script>
         $("#dateInput1").datePicker();
-        $("#dateInput2").datePicker({ minDate: new Date() });
+        $("#dateInput2").datePicker({ minDate: "2016-01-20" });
         $("#dateInput3").datePicker({ currentDate: "2013-01-02" });
         $("#dateInput4").datePicker({
             minDate: null,
