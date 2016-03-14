@@ -147,7 +147,7 @@
             this.$ele.attr("readonly", "readonly");
 
             this.currentYear = this.currentYear || this.currentDate.getFullYear();
-            this.currentMonth = this.currentMonth || this.currentDate.getMonth();
+            this.currentMonth = this.currentMonth != null ? this.currentMonth : this.currentDate.getMonth();
 
             var currentDate = new Date(this.currentYear, this.currentMonth, 1);
             this.currentYear = currentDate.getFullYear();
